@@ -24,10 +24,16 @@ class UsersController < ActionController::Base
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(user_params)
+    params = user_params
+    if params[:password_digest]
+      params[:password_digest] = BCrypt::Password.create(params[:password_digest])
+    end
+
+    @user = User.new(params)
 
     respond_to do |format|
-      if @user.save
+      if @user.save# && @user.authenticate(params[:password_digest])
+        #sign_in user
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -56,6 +62,7 @@ class UsersController < ActionController::Base
   def destroy
     @user.destroy
     respond_to do |format|
+      #sign_out
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
