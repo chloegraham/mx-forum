@@ -11,7 +11,7 @@ gem 'jquery-rails', '4.1.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.4.1'
 gem 'bcrypt', '~> 3.1.7' # for passwords
-
+gem 'bootstrap-sass', '3.3.6'
 
 group :production do
   gem 'pg', '0.18.4'
