@@ -13,3 +13,10 @@ two:
   email: foo@example.com2
   password_digest: MyString
   role: :user
+
+chloe:
+  first_name: chloe
+  last_name: graham
+  email: chloe@graham.com
+  password_digest: <%= User.digest('password') %>
+  role: :user
