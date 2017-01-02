@@ -3,13 +3,13 @@
 one:
   first_name: MyString
   last_name: MyString
-  email: MyString
+  email: foo@example.com
   password_digest: MyString
-  role: 1
+  role: :user
 
 two:
   first_name: MyString
   last_name: MyString
-  email: MyString
+  email: foo@example.com2
   password_digest: MyString
-  role: 1
+  role: :user
