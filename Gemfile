@@ -11,7 +11,8 @@ gem 'jquery-rails', '4.1.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.4.1'
 gem 'bcrypt', '~> 3.1.7' # for passwords
-
+gem 'bootstrap-sass', '3.3.6'
+gem 'thor', '0.19.1'
 
 group :production do
   gem 'pg', '0.18.4'
@@ -29,6 +30,13 @@ group :development do
   gem 'spring',                '1.7.2'
   gem 'spring-watcher-listen', '2.0.0'
 end
+
+group :test do
+  gem 'rails-controller-testing', '0.1.1'
+  gem 'minitest-reporters',       '1.1.9'
+  gem 'guard',                    '2.13.0'
+  gem 'guard-minitest',           '2.4.4'
+end	
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
