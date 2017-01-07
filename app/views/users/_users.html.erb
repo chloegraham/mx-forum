@@ -1,0 +1,20 @@
+<tr>
+  <td><%= gravatar_for user %></td>
+  <td><%= link_to user.first_name, user %></td>
+  <td><%= user.last_name %></td>
+  <% if current_user.role == :admin %>
+    <td><%= user.email %></td>
+    <td>
+      <% if user.role %>
+        <%= user.role %>
+      <% else %>
+        User
+      <% end %>
+    </td>
+  <% end %>
+  <td><%= link_to 'Show', user %></td>
+  <% if current_user.role == :admin %>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
+</tr>

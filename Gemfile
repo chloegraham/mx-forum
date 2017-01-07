@@ -10,9 +10,12 @@ gem 'coffee-rails', '4.2.1'
 gem 'jquery-rails', '4.1.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.4.1'
-gem 'bcrypt', '~> 3.1.7' # for passwords
-gem 'bootstrap-sass', '3.3.6'
-gem 'thor', '0.19.1'
+gem 'bootstrap-sass','3.3.6'
+gem 'bcrypt',       '~> 3.1.7' # for passwords
+gem 'thor',         '0.19.1'
+gem 'faker',        '1.6.6'
+gem 'will_paginate',           '3.1.0'
+gem 'bootstrap-will_paginate', '0.0.10'
 
 group :production do
   gem 'pg', '0.18.4'

@@ -20,3 +20,20 @@ chloe:
   email: chloe@graham.com
   password_digest: <%= User.digest('password') %>
   role: :user
+
+admin:
+  first_name: admin
+  last_name: boss
+  email: boss@graham.com
+  password_digest: <%= User.digest('password') %>
+  role: :admin
+
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  first_name:  <%= "User" %>
+  last_name: <% "#{n}" %>
+  email: <%= "user-#{n}@test.com" %>
+  password_digest: <%= User.digest('password') %>
+  role: :user
+<% end %>
