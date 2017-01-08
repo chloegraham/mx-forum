@@ -7,36 +7,25 @@ It uses an SQLite3 database for both testing and development, and uses a Postgre
 
 -- Gems --
 
-* bcrypt ~> 3.1.7 # for incrypting and decypting passwords
+This application uses open source components. You can find the source code to these projects along with their licence agreements below.
+
 * faker 1.6.6 # for creating bulk testing data with mass generated 'fake' data
+Benjamin Curtis 2007 - https://github.com/stympy/faker
+
 * will_paginate 3.1.0 # for incrypting and decypting passwords
-* will_paginate 3.1.0
+Mislav Marohnić 2009 - https://github.com/mislav/will_paginate
+
 * bootstrap-will_paginate 0.0.10 # these two gems allow models to be paginated so that a limited number of objects can be shown one page
+Nicholas Dainty 2012 - https://github.com/bootstrap-ruby/will_paginate-bootstrap
 
+* bootstrap-sass 3.3.6 # a sass powered version of bootstrap to help with styling
+The Bootstrap Authors, Twitter, Inc 2011 - https://github.com/twbs/bootstrap-sass
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* bcrypt ~> 3.1.7 # for incrypting and decypting passwords
+Coda Hale 2011 - https://github.com/codahale/bcrypt-ruby
 
-Things you may want to cover:
+* guard 2.13.0 # automated testing
+Thibaud Guillaume-Gentil 2009 - https://github.com/guard
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* pry
+John Mair 2016 - https://github.com/pry

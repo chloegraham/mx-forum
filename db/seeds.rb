@@ -16,8 +16,10 @@ User.create!(first_name:  "Example",
   first_name  = Faker::Name.name
   email = "example-#{n+1}@gem.org"
   password = "password"
+  role = "user"
   User.create!(first_name:  first_name,
                email: email,
+               role: role,
                password:              password,
                password_confirmation: password)
 end

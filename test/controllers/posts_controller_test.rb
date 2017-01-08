@@ -1,8 +1,9 @@
 require 'test_helper'
 
 class PostsControllerTest < ActionDispatch::IntegrationTest
+
   setup do
-    @post = posts(:one)
+    @post = posts(:mx_video)
   end
 
   test "should get index" do
@@ -23,19 +24,9 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to post_url(Post.last)
   end
 
-  test "should show post" do
+  test "should not show post" do
     get post_url(@post)
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_post_url(@post)
-    assert_response :success
-  end
-
-  test "should update post" do
-    patch post_url(@post), params: { post: { content: @post.content, location: @post.location, title: @post.title, user_id: @post.user_id, views: @post.views } }
-    assert_redirected_to post_url(@post)
+    assert_response :fail
   end
 
   test "should destroy post" do
@@ -45,4 +36,28 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to posts_url
   end
+
+  test "should redirect create when not logged in" do
+    assert_no_difference 'Post.count' do
+      post posts_path, params: { post: { content: "Lorem ipsum" } }
+    end
+    assert_redirected_to login_url
+  end
+
+  test "should redirect destroy when not logged in" do
+    assert_no_difference 'Post.count' do
+      delete post_path(@post)
+    end
+    assert_redirected_to login_url
+  end
+
+  test "should redirect destroy if not your post to delete" do
+    log_in_as(users(:chloe))
+    post = post(:ants)
+    assert_no_difference 'post.count' do
+      delete post_path(post)
+    end
+    assert_redirected_to root_url
+  end
+
 end
