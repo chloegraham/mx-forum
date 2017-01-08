@@ -5,7 +5,21 @@ mx_video:
   content: "Look at this crazy video of me jumping a huge table-top woah"
   created_at: <%= 2.hours.ago %>
 
+moto__gp:
+  title: close call
+  content: Bang bang boom boom HOW DID HE STAY ON THAT BIKE
+  created_at: <%= 2.years.ago %>
+  user: two
+
 most_recent:
   title: Right about now
   content: "This really is quite recent"
   created_at: <%= Time.zone.now %>
+
+<% 30.times do |n| %>
+post_<%= n %>:
+  title: <%= Faker::Lorem.characters(15) %>
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+  user: chloe
+<% end %>

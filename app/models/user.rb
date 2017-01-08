@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  enum role: [:user, :admin, :super_admin]
+  enum role: ["user", "admin", "super_admin"]
   before_save { email.downcase! }
   #attr_accessor :email, :password_digest #:password, :password_confirmation
 	has_secure_password
@@ -16,6 +16,10 @@ class User < ActiveRecord::Base
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
                                                   BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
+  end
+
+  def feed
+    Post.where("user_id = ?", id)
   end
   
 end
