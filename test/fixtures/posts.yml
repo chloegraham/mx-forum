@@ -1,15 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyText
-  content: MyText
-  user_id: 1
-  location: MyString
-  views: 1
+mx_video:
+  title: big jump
+  content: "Look at this crazy video of me jumping a huge table-top woah"
+  created_at: <%= 2.hours.ago %>
 
-two:
-  title: MyText
-  content: MyText
-  user_id: 1
-  location: MyString
-  views: 1
+most_recent:
+  title: Right about now
+  content: "This really is quite recent"
+  created_at: <%= Time.zone.now %>
