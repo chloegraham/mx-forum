@@ -1,4 +1,18 @@
-== README
+== README ==
+
+My application is using Rails (5.0.1) and Ruby (2.3.3) and runs on a Heroku server at 
+https://murmuring-fortress-38315.herokuapp.com/
+
+It uses an SQLite3 database for both testing and development, and uses a PostgreSQL database on production.
+
+-- Gems --
+
+* bcrypt ~> 3.1.7 # for incrypting and decypting passwords
+* faker 1.6.6 # for creating bulk testing data with mass generated 'fake' data
+* will_paginate 3.1.0 # for incrypting and decypting passwords
+* will_paginate 3.1.0
+* bootstrap-will_paginate 0.0.10 # these two gems allow models to be paginated so that a limited number of objects can be shown one page
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

@@ -20,6 +20,7 @@ User.create!(first_name:  "Example",
                email: email,
                password:              password,
                password_confirmation: password)
+end
 
 users = User.order(:created_at).take(6)
 50.times do
