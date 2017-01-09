@@ -1,7 +1,10 @@
 == README ==
 
+MX-FORUM
+2017 - Chloe Graham
+
 My application is using Rails (5.0.1) and Ruby (2.3.3) and runs on a Heroku server at 
-https://murmuring-fortress-38315.herokuapp.com/
+https://mx-forum.herokuapp.com/
 
 It uses an SQLite3 database for both testing and development, and uses a PostgreSQL database on production.
 
