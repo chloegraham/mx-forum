@@ -16,6 +16,8 @@ gem 'thor',         '0.19.1'
 gem 'faker',        '1.6.6'
 gem 'will_paginate',           '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
+gem 'has_secure_token'
+# gem "devise"
 
 group :production do
   gem 'pg', '0.18.4'

@@ -17,4 +17,11 @@ Rails.application.routes.draw do
   resources :posts, only: [:create, :destroy]
   resources :users
 
+	namespace :api do
+	  #devise_scope :user do
+	  post 'sessions' => 'sessions#create', :as => 'login'
+	  delete 'sessions' => 'sessions#destroy', :as => 'logout'
+	  #end
+	  resources :users, :defaults => { :format => 'json' }
+  end
 end
