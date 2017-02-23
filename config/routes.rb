@@ -23,5 +23,6 @@ Rails.application.routes.draw do
 	  delete 'sessions' => 'sessions#destroy', :as => 'logout'
 	  #end
 	  resources :users, :defaults => { :format => 'json' }
+	  resources :posts, only: [:index, :create, :show, :update, :destroy], :defaults => { :format => 'json' }
   end
 end
